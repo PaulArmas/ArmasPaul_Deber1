@@ -16,8 +16,6 @@ const int sw3 = 5;
 const int sw4 = 4;
 int i = 0;
 int j = 0;
-int k = 0;
-int l = 0;
 
 void setup() {
   pinMode(led1,OUTPUT); // pin 13 como salida
