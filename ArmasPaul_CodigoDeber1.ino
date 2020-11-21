@@ -34,7 +34,7 @@ void setup() {
 
 void loop() {
   // Juego #1: Se usan 6 leds, de los cuales se encienden los pares por 10 ocasiones
-  if(digitalRead(sw1)==HIGH){
+  if(digitalRead(sw1)==HIGH && digitalRead(sw2)==LOW && digitalRead(sw3)==LOW && digitalRead(sw4)==LOW){
     for(i=0;k<10;k++){
       digitalWrite(led1,LOW);
       digitalWrite(led2,HIGH);
@@ -53,7 +53,7 @@ void loop() {
     }
   }
   // Juego #2: Se usan 6 leds, de los cuales se encienden los impartes por 10 ocasiones
-  if(digitalRead(sw2)==HIGH){
+  if(digitalRead(sw1)==LOW && digitalRead(sw2)==HIGH && digitalRead(sw3)==LOW && digitalRead(sw4)==LOW){
     for(j=0;j<10;j++){
       digitalWrite(led1,HIGH);
       digitalWrite(led2,LOW);
@@ -72,7 +72,7 @@ void loop() {
     }
   }
   // Juego #3: Se encienden secuencialmente cada uno ellos, y luego se apaguen secuencialmente.
-  if(digitalRead(sw3)==HIGH){
+  if(digitalRead(sw1)==LOW && digitalRead(sw2)==LOW && digitalRead(sw3)==HIGH && digitalRead(sw4)==LOW){
     digitalWrite(led1,HIGH);
     delay(500);
     digitalWrite(led2,HIGH);
@@ -99,7 +99,7 @@ void loop() {
     delay(500);
   }
   // Juego #4: Se encienden secuencialmente los leds impares, luego se encienden secuencialmente las luces pares, y al final se apagan todas secuencialmente.
-  if(digitalRead(sw4)==HIGH){
+  if(digitalRead(sw1)==LOW && digitalRead(sw2)==LOW && digitalRead(sw3)==LOW && digitalRead(sw4)==HIGH){
     digitalWrite(led1,HIGH);
     digitalWrite(led2,LOW);
     delay(500);
@@ -131,5 +131,4 @@ void loop() {
     digitalWrite(led6,LOW);
     delay(500);
   }
-  
 }
