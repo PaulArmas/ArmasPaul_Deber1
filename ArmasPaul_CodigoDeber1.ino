@@ -33,7 +33,7 @@ void setup() {
 void loop() {
   // Juego #1: Se usan 6 leds, de los cuales se encienden los pares por 10 ocasiones
   if(digitalRead(sw1)==HIGH && digitalRead(sw2)==LOW && digitalRead(sw3)==LOW && digitalRead(sw4)==LOW){
-    for(i=0;k<10;k++){
+    for(i=0;i<10;i++){
       digitalWrite(led1,LOW);
       digitalWrite(led2,HIGH);
       digitalWrite(led3,LOW);
